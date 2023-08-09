@@ -1,20 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package mod8;
+import java.util.Scanner;
 
-/**
- *
- * @author migue
- */
-public class Mod8 {
-
-    /**
-     * @param args the command line arguments
-     */
+public class CalculadoraMedia {
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite a primeira nota: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.println("Digite a segunda nota: ");
+        double nota2 = scanner.nextDouble();
+        
+        System.out.println("Digite a terceira nota: ");
+        double nota3 = scanner.nextDouble();
+        
+        System.out.println("Digite a quarta nota: ");
+        double nota4 = scanner.nextDouble();
+        
+        double media = calcularMedia(nota1, nota2, nota3, nota4);
+        System.out.println("A média das notas é: " + media);
+        
+        scanner.close();
     }
     
+    public static double calcularMedia(double nota1, double nota2, double nota3, double nota4) {
+        return (nota1 + nota2 + nota3 + nota4) / 4;
+    }
 }
+
